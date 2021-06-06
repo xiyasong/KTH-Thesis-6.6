@@ -1,0 +1,54 @@
+\documentclass[12pt, openany]{book}
+
+% This is all the packages and settings and so on.
+% It is using custom fonts that needs to be installed on the computer. If they are not present, they have to be added manually.
+\input{setup/settings.tex}
+
+% Defining files for bibliography
+%\addbibresource{ref.bib}
+\addbibresource{references.bib}
+% Add a second bibliography file for the second author to allow
+% both to update it through the mendeley integration.
+% \addbibresource{ref-author-2.bib}
+
+% Defining document information
+\title{An eQTL-based analysis for investigation of kidney cancer risk loci in a Japanese cohort}
+\newcommand{\subtitle}{KTH Master Thesis Report}
+\author{Xiya Song}
+\usepackage{graphicx}
+% \usepackage{hyperref}
+\hypersetup{hidelinks,
+	colorlinks=true,
+	allcolors=black,
+	pdfstartview=Fit,
+	breaklinks=true}
+\graphicspath{ {./figures/} }
+
+\begin{document}
+\setstretch{1.4}
+
+% The front page of the document
+\pagenumbering{roman}
+\include{setup/title-page}
+\include{sections/0-pre-content}
+
+\pagenumbering{arabic}
+
+\include{sections/1-introduction}
+\include{sections/2-Materials_and_Methods}
+\include{sections/3-Results}
+\include{sections/4-Discussion}
+\include{sections/5-Future_work}
+\include{sections/6-Ethical_reflection}
+
+% \include{content}
+
+\newpage
+\addcontentsline{toc}{chapter}{References}
+\printbibliography
+
+
+\include{sections/appendices}
+\include{back-cover}
+
+\end{document}

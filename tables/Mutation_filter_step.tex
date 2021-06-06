@@ -1,0 +1,26 @@
+\begin{table}[!ht]
+\centering
+\caption{Variants QC filtering from Haplotypecaller}
+~\\
+\label{tab:Mutation_filter_step}
+\begin{tabular}{lll}
+\toprule
+\textbf{Filtering / processing criterion}		  & \textbf{Total sites}   &\textbf{Percentage}                                                                                                                                       \\ \toprule
+Initial variants                   & 7088610	&100.00\%	\\
+\midrule
+VQSR and ExcessHet not PASS & 6813720 	&96.12\%	\\
+\midrule
+QD <2.0 or QUAL <30 & 6804941	&96.00\%	\\
+\midrule
+InbreedingCoeff < -0.3  & 6802902	&95.97\%	\\
+\midrule
+Hail splitting Multi-allelic sites 	& 6927794 	&\\
+\midrule
+Monomorphic sites with AC =0 & 6356484	&89.67\% \\
+\midrule
+Missingness > 25\% & 459062	&6.48\% \\
+\midrule
+MAF <=1\% & 284774	& 4.02\% \\ 
+\bottomrule
+\end{tabular}
+\end{table}
